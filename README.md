@@ -17,3 +17,9 @@ All of our tutorials on Ruby, Java, Python strive towards minimizing the languag
 # steps
 1. pip install -r requirements.txt
 2. behave
+
+# document
+1. https://docs.python.org/3/
+2. http://nose.readthedocs.io/en/latest/
+3. http://pythonhosted.org/behave/
+4. http://selenium-python.readthedocs.io/
