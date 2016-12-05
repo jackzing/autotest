@@ -1,4 +1,4 @@
-# python_behave_template
+# python behave
 Selenium webdriver , python , behave
 
 # Website
