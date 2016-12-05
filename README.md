@@ -18,6 +18,9 @@ All of our tutorials on Ruby, Java, Python strive towards minimizing the languag
 1. pip install -r requirements.txt
 2. behave
 
+# test
+1. nosetests -v tests/testnode.py
+
 # document
 1. https://docs.python.org/3/
 2. http://nose.readthedocs.io/en/latest/
