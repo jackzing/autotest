@@ -16,3 +16,4 @@ All of our tutorials on Ruby, Java, Python strive towards minimizing the languag
 
 # steps
 1. pip install -r requirements.txt
+2. behave
