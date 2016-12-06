@@ -1,0 +1,3 @@
+siteConf = {
+	'stage' : 'js'
+}
