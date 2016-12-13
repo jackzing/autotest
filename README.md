@@ -20,6 +20,8 @@ All of our tutorials on Ruby, Java, Python strive towards minimizing the languag
 
 # test
 1. nosetests -v tests/testnode.py
+# output stdout
+2. nosetests -s -v tests/testnode.py
 
 # document
 1. https://docs.python.org/3/
