@@ -15,7 +15,7 @@ All of our tutorials on Ruby, Java, Python strive towards minimizing the languag
 7. Run behave with "-v" gives verbose log. For example running headless using phantomjs with -v creates ghostdriver.log  
 
 #requirement
-python version > 3.0 (< 3.5):
+python version > 3.0 (< 3.5)
     
 # steps
 1. pip install -r requirements.txt
