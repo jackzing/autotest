@@ -90,3 +90,6 @@ ENV/
 
 # project 
 .idea/
+
+#ignore browser driver folder
+bin/driver/
