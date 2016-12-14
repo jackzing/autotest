@@ -14,6 +14,9 @@ All of our tutorials on Ruby, Java, Python strive towards minimizing the languag
 6. Open a shell/command prompt and from the root folder run "behave features --no-capture"  
 7. Run behave with "-v" gives verbose log. For example running headless using phantomjs with -v creates ghostdriver.log  
 
+#requirement
+python version > 3.0 (< 3.5):
+    
 # steps
 1. pip install -r requirements.txt
 2. behave
