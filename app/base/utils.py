@@ -1,3 +1,4 @@
+import platform
 class Util:
     @staticmethod
     def conf(list, key, default_value):
@@ -16,3 +17,16 @@ class Util:
                     conf = default_value
                     break
         return conf
+
+    @staticmethod
+    def getOS():
+        osname = platform.system()
+        osname = osname.lower()
+        osdict = {
+            "darwin": "darwin",
+            "linux" : "linux",
+            "windows" : "windows"
+        }
+        if osname in osdict.keys() :
+            return osdict[osname]
+        return osname

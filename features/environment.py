@@ -4,7 +4,10 @@ import os
 import logging
 from app.base.config import Config
 from app.base.path import Path
+from app.util.driver import Driver
+
 from selenium import webdriver
+
 
 def before_all(context):
      print("Executing before all")
@@ -23,7 +26,7 @@ def before_scenario(context,scenario):
      #print("Before scenario\n")
      app_root = Path.getRoot()
      chrome_driver = context.site_conf.conf("browser.chrome_driver")
-     chrome_path = os.path.realpath(os.path.join(app_root, chrome_driver))
+     chrome_path = Driver.get_driver_path(app_root, chrome_driver)
      context.browser = webdriver.Chrome(chrome_path)
 
 def after_scenario(context,scenario):
