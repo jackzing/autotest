@@ -36,5 +36,5 @@ class Config:
                 self.__site_conf[section_name][name] = value
             print
 
-    def conf(self, key, defval):
+    def conf(self, key, defval=None):
         return Util.conf(self.__site_conf, key, defval)

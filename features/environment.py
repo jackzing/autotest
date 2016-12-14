@@ -1,10 +1,10 @@
 #load common module
 import init
-from app.base.config import Config
-
-from selenium import webdriver
+import os
 import logging
-
+from app.base.config import Config
+from app.base.path import Path
+from selenium import webdriver
 
 def before_all(context):
      print("Executing before all")
@@ -21,8 +21,10 @@ def before_feature(context, feature):
 #Scenario level objects are popped off context when scenario exits
 def before_scenario(context,scenario):
      #print("Before scenario\n")
-     path = "/Users/jgao/jjshoue/autotest/bin/chromedriver"
-     context.browser = webdriver.Chrome(path)
+     app_root = Path.getRoot()
+     chrome_driver = context.site_conf.conf("browser.chrome_driver")
+     chrome_path = os.path.realpath(os.path.join(app_root, chrome_driver))
+     context.browser = webdriver.Chrome(chrome_path)
 
 def after_scenario(context,scenario):
      context.browser.quit()
