@@ -1,4 +1,5 @@
 import platform
+import random
 class Util:
     @staticmethod
     def conf(list, key, default_value):
@@ -30,3 +31,7 @@ class Util:
         if osname in osdict.keys() :
             return osdict[osname]
         return osname
+
+    @staticmethod
+    def random(lens, start=0):
+        return random.randint(start, lens)

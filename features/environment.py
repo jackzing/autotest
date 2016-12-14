@@ -27,10 +27,16 @@ def before_scenario(context,scenario):
      app_root = Path.getRoot()
      chrome_driver = context.site_conf.conf("browser.chrome_driver")
      chrome_path = Driver.get_driver_path(app_root, chrome_driver)
-     context.browser = webdriver.Chrome(chrome_path)
+
+     PROXY = "socks5://192.168.1.41:9003"  # IP:PORT or HOST:PORT
+     chrome_options = webdriver.ChromeOptions()
+     chrome_options.add_argument('--proxy-server=%s' % PROXY)
+     context.browser = webdriver.Chrome(chrome_path, chrome_options=chrome_options)
+     #set time out
+     #context.browser.set_page_load_timeout(5)
 
 def after_scenario(context,scenario):
-     context.browser.quit()
+     #context.browser.quit()
      print("After scenario\n")
 
 def after_feature(context,feature):
