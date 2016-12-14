@@ -31,3 +31,4 @@ python version > 3.0 (< 3.5)
 2. http://nose.readthedocs.io/en/latest/
 3. http://pythonhosted.org/behave/
 4. http://selenium-python.readthedocs.io/
+5. http://nose.readthedocs.io/en/latest/
