@@ -7,6 +7,19 @@ from app.base.path import Path
 from app.util.driver import Driver
 
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+def ele_exists(driver, selector_type, selector):
+    try:
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((selector_type, selector))
+        )
+        return True
+    except:
+        print(selector + " not exits!")
+        driver.quit()
 
 
 def before_all(context):
@@ -32,6 +45,7 @@ def before_scenario(context,scenario):
      chrome_options = webdriver.ChromeOptions()
      chrome_options.add_argument('--proxy-server=%s' % PROXY)
      context.browser = webdriver.Chrome(chrome_path, chrome_options=chrome_options)
+     context.ele_exists = ele_exists
      #set time out
      #context.browser.set_page_load_timeout(5)
 
